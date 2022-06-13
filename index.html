@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1st Assignment</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 </head>
 
 <body>
@@ -15,18 +19,17 @@
             <div class="header__logo">
                 <img src="./images/Logo.svg" alt="UST Omni logo" />
             </div>
+
             <nav class="header__dashboardlist">
 
                 <ul>
-
-
                     <a href="https://www.google.com/">
-                        <li><img src="./images/dashboard_icon.svg" alt="dashboard_icon" />
+                        <li>
+                            <img src="./images/dashboard_icon.svg" alt="dashboard_icon" />
+                            <div class="cls">Dashboard</div>
 
-                            <div>Dashboard</div>
                         </li>
                     </a>
-
 
                     <a href="https://www.google.com/">
                         <li>
@@ -65,13 +68,21 @@
                     </a>
                 </ul>
 
-                <div class="header__dashboard">
-                    <span><img src="./images/dashboardShipment_icon.svg" alt="shipment_icon" /></span>
-                    <span><img src="./images/dashboardShipment_icon.svg" alt="shipment_icon" /></span>
-                    <span class="header__dashbaordusername">Chance Kenter </span>
-                    <img src="./images/user-profile.svg" alt="user profile">
-                </div>
+
             </nav>
+            <div class="header__dashboard">
+                <span><img src="./images/dashboardShipment_icon.svg" alt="shipment_icon" /></span>
+                <span><img src="./images/dashboardShipment_icon.svg" alt="shipment_icon" /></span>
+                <span class="header__dashbaordusername">Chance Kenter </span>
+                <img src="./images/user-profile.svg" alt="user profile">
+            </div>
+
+            <div class="hamburger">
+                <span class="menu"></span>
+                <span class="menu"></span>
+                <span class="menu"></span>
+            </div>
+
 
         </header>
 
@@ -92,7 +103,7 @@
                         <p class="status__pendingapprovalscount"><b>13</b></p>
                     </div>
                     <div class="status__pendingimage">
-                        <img src="./images/ActionsToTake.svg" alt="Actions to take" />
+                        <img src="./images/pendingApprovals.svg" alt="Actions to take" />
                     </div>
                 </div>
                 <div class="status__delivered_card">
@@ -115,28 +126,35 @@
 
 
                         <div class="items">
-                            <p class="status__InboundFrozen">Frozen</p>
+                            <div class="cla">
+                                <p class="status__Inbound">Frozen</p>
+                                <p class="status__color">
+                                    <span>5%</span>
+                                </p>
+                            </div>
+                            <div class="cla">
+                                <p class="status__Inbound">Perishable</p>
+                                <p class="status__color">
+                                    <span>3%</span>
+                                </p>
+                            </div>
 
-                            <p class="status__InboundPerishable">Perishable</p>
+                            <div class="cla">
+                                <p class="status__Inbound">Fresh</p>
+                                <p class="status__color">
+                                    <span>6%</span>
+                                </p>
+                            </div>
 
-                            <p class="status__InboundFresh">Fresh</p>
-
-                            <p class="status__InboundDry">Dry</p>
+                            <div class="cla">
+                                <p class="status__Inbound">Dry</p>
+                                <p class="status__color">
+                                    <span>10%</span>
+                                </p>
+                            </div>
 
                         </div>
 
-                        <div class="item__percentage">
-                            <p class="status__frozencolor"></p>
-                            <p>5%</p>
-                            <p class="status__perishablecolor"></p>
-                            <p>3%</p>
-                            <p class="status__freshcolor"></p>
-                            <p>6%</p>
-                            <p class="status__drycolor"></p>
-                            <p>6%</p>
-
-
-                        </div>
 
 
                     </div>
@@ -146,356 +164,393 @@
                 </div>
             </div>
 
-            <div class="updates">
-                <div class="updates__aboveWrapper">
-                    <div class="updates__left">
-                        <div class="updates_leftwidget">
-                            <div class="updates__header">
-                                <div class="updates__header-left">
-                                    <a href="https://www.google.com/" class="updates__Inbound">Inbound</a>
-                                    <a href="https://www.google.com/" class="updates__Outbound">Outbound</a>
-                                    <a href="https://www.google.com/" class="updates__Watchlist">Watchlist</a>
+
+            <!---->
+            <div class="content">
+
+                <div class="container__left">
+                    <div class="updates">
 
 
-                                </div>
-                                <div class="updates__header-right">
-                                    <a href="https://www.google.com/" class="updates__view_all_shipment">view all
-                                        shipments </a>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <a>All <span>(25)</span></a>
-                                <a>Delayed <span>(10)</span></a>
-                                <a>Early <span>(6)</span></a>
-                                <a>Resheduled <span>(2)</span></a>
-                                <a>Under Review <span>(7)</span></a>
-                                <a>On Time <span>(7)</span></a>
+
+                        <div class="updates__header">
+                            <div class="updates__header-left">
+                                <a href="https://www.google.com/" class="updates__Inbound">Inbound</a>
+                                <a href="https://www.google.com/" class="updates__Outbound">Outbound</a>
+                                <a href="https://www.google.com/" class="updates__Watchlist">Watchlist</a>
+
 
                             </div>
-
-                            <div class="search">
-                                <form action="" class="search__seachfield-box">
-                                    <button type="Submit">
-                                        <img src="./images/searchIcon.svg" alt="search icon">
-
-                                    </button>
-                                    <input type="text"
-                                        placeholder="Search by: Shipment ID, Origin, Destination, Product category, vendor"
-                                        name="search">
-                                </form>
+                            <div class="updates__header-right">
+                                <a href="https://www.google.com/" class="updates__view_all_shipment">view all
+                                    shipments &nbsp;<span>></span></a>
                             </div>
                         </div>
+                        <div class="updates__content">
+                            <a>All <span>(25)</span></a>
+                            <a>Delayed <span>(10)</span></a>
+                            <a>Early <span>(6)</span></a>
+                            <a>Resheduled <span>(2)</span></a>
+                            <a>Under Review <span>(7)</span></a>
+                            <a>On Time <span>(7)</span></a>
+
+                        </div>
+
+                        <div class="search">
+                            <form action="" class="search__seachfield-box">
+                                <button type="Submit">
+                                    <img src="./images/searchIcon.svg" alt="search icon">
+
+                                </button>
+                                <input type="text"
+                                    placeholder="Search by: Shipment ID, Origin, Destination, Product category, vendor"
+                                    name="search">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="shipment_cards">
+                        <div class="wrapper">
+                            <div class="wrapper__num">
+                                <div class="wrapper__header">
+                                    <div class="wrapper__header-left">
+                                        <p>Shipment ID</p>
+                                        <p>109669449</p>
+                                    </div>
+                                    <div class="wrapper__headericons-right">
+                                        <img src="./images/global.svg" alt="global image">
+                                        <img src="./images/truckicon.svg" alt="truck image">
+                                        <p>On Time</p>
+                                    </div>
+                                </div>
+                                <div class="wrapper__main">
+                                    <div class="wrapper__main_Origin-Destination">
+                                        <div class="origin">
+                                            <img src="./images/wrapper__1_arrow.svg" alt="wrapper__1_arrow">
+                                            <div class="wrapper__origin">
+                                                <p>Origin</p>
+                                                <p> Sikkim, IN</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="destination">
+                                            <img src="./images/Wrapper1_destinationarrow.svg"
+                                                alt="Wrapper1_destination-arrow">
+
+                                            <div class="wrapper__destination">
+                                                <p>Destination</p>
+                                                <p> Seattle, USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper__mainDetails">
+                                        <div class="wrapper__main_Po_Vendordetails">
+                                            <div class="poNumber">
+                                                <p>PO#</p>
+                                                <p>661234</p>
+                                            </div>
+                                            <div class="vendorname">
+                                                <p>Vendor</p>
+                                                <p>&nbsp;Bailey</p>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper__main_plannedETAdetails">
+                                            <div class="plannedETA">
+                                                <p>Planned ETA</p>
+                                                <p>Jan 27, 2021 03:42 PM EST</p>
+                                            </div>
+                                            <div class="currentETA">
+                                                <p>Current ETA</p>
+                                                <p>Jan 31, 2021 10:17 PM EST</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper__sub-logos">
+                                        <img src="./images/wrapper1/icon_Fire.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/meter.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/JCB.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/bulb.svg" alt="icon fire pic">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper__num">
+                                <div class="wrapper__header num2">
+                                    <div class="wrapper__header-left num2">
+                                        <p>Shipment ID</p>
+                                        <p>109669412</p>
+                                    </div>
+                                    <div class="wrapper__headericons-right num2">
+                                        <img src="./images/global.svg" alt="global image">
+                                        <img src="./images/aeroplane symbol.svg" alt="truck image">
+                                        <p>On Time</p>
+                                    </div>
+                                </div>
+                                <div class="wrapper__main num2">
+                                    <div class="wrapper__main_Origin-Destination num2">
+                                        <div class="origin num2">
+                                            <img src="./images/wrapper__1_arrow.svg" alt="wrapper__1_arrow">
+                                            <div class="wrapper__origin num2">
+                                                <p>Origin</p>
+                                                <p> Spain, IE</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="destination num2">
+                                            <img src="./images/Wrapper1_destinationarrow.svg"
+                                                alt="Wrapper1_destination-arrow">
+
+                                            <div class="wrapper__destination num2">
+                                                <p>Destination</p>
+                                                <p> Seattle, USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper__mainDetails num2">
+                                        <div class="wrapper__main_Po_Vendordetails num2">
+                                            <div class="poNumber num2">
+                                                <p>PO#</p>
+                                                <p>661234</p>
+                                            </div>
+                                            <div class="vendorname num2">
+                                                <p>Vendor</p>
+                                                <p>&nbsp;Bailey</p>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper__main_plannedETAdetails num2">
+                                            <div class="plannedETA num2">
+                                                <p>Planned ETA</p>
+                                                <p>Jan 27, 2021 03:42 PM EST</p>
+                                            </div>
+                                            <div class="currentETA num2">
+                                                <p>Current ETA</p>
+                                                <p>Jan 31, 2021 10:17 PM EST</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper__sub-logos num2">
+                                        <img src="./images/wrapper1/icon_Fire.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/meter.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/JCB.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/bulb.svg" alt="icon fire pic">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="wrapper__num">
+                                <div class="wrapper__header num3">
+                                    <div class="wrapper__header-left num3">
+                                        <p>Shipment ID</p>
+                                        <p>109669432</p>
+
+
+                                    </div>
+                                    <div class="wrapper__headericons-right num3">
+                                        <img src="./images/global.svg" alt="global image">
+                                        <img src="./images/wrapper3__fire-global.svg" alt="truck image">
+                                        <p>DELAYED</p>
+                                    </div>
+                                </div>
+                                <div class="trackingStatus">
+                                    <div class="trackinginfo">
+                                        Awaiting Tracking Info
+                                    </div>
+                                    <div class="delayTime">
+                                        4 hrs delayed
+                                    </div>
+                                </div>
+                                <div class="wrapper__main num3">
+                                    <div class="wrapper__main_Origin-Destination num3">
+                                        <div class="origin num3">
+                                            <img src="./images/wrapper__1_arrow.svg" alt="wrapper__1_arrow">
+                                            <div class="wrapper__origin num3">
+                                                <p>Origin</p>
+                                                <p> Dublin, IR</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="destination num3">
+                                            <img src="./images/Wrapper1_destinationarrow.svg"
+                                                alt="Wrapper1_destination-arrow">
+
+                                            <div class="wrapper__destination num3">
+                                                <p>Destination</p>
+                                                <p> Seattle, USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper__mainDetails num3">
+                                        <div class="wrapper__main_Po_Vendordetails num3">
+                                            <div class="poNumber num3">
+                                                <p>PO#</p>
+                                                <p>661234</p>
+                                            </div>
+                                            <div class="vendorname num3">
+                                                <p>Vendor</p>
+                                                <p>&nbsp;Bailey</p>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper__main_plannedETAdetails num3">
+                                            <div class="plannedETA num3">
+                                                <p>Planned ETA</p>
+                                                <p>Jan 27, 2021 03:42 PM EST</p>
+                                            </div>
+                                            <div class="currentETA num3">
+                                                <p>Current ETA</p>
+                                                <p>Jan 31, 2021 10:17 PM EST</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper__sub-logos num3">
+                                        <img src="./images/wrapper1/icon_Fire.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/meter.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/JCB.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/bulb.svg" alt="icon fire pic">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper__num">
+                                <div class="wrapper__header num4">
+                                    <div class="wrapper__header-left num4">
+                                        <p>Shipment ID</p>
+                                        <p>109669412</p>
+                                    </div>
+                                    <div class="wrapper__headericons-right num4">
+                                        <img src="./images/wrapper4__global.svg" alt="global image">
+                                        <img src="./images/aeroplane symbol.svg" alt="truck image">
+                                        <p>Resheduled</p>
+                                    </div>
+                                </div>
+                                <div class="wrapper__main num4">
+                                    <div class="wrapper__main_Origin-Destination num4">
+                                        <div class="origin num4">
+                                            <img src="./images/wrapper__1_arrow.svg" alt="wrapper__1_arrow">
+                                            <div class="wrapper__origin num4">
+                                                <p>Origin</p>
+                                                <p> Limoges, FR</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="destination num4">
+                                            <img src="./images/Wrapper1_destinationarrow.svg"
+                                                alt="Wrapper1_destination-arrow">
+
+                                            <div class="wrapper__destination num4">
+                                                <p>Destination</p>
+                                                <p> Seattle, USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper__mainDetails num4">
+                                        <div class="wrapper__main_Po_Vendordetails num4">
+                                            <div class="poNumber num4">
+                                                <p>PO#</p>
+                                                <p>661234</p>
+                                            </div>
+                                            <div class="vendorname num4">
+                                                <p>Vendor</p>
+                                                <p>&nbsp;Bailey</p>
+                                            </div>
+                                        </div>
+                                        <div class="wrapper__main_plannedETAdetails num4">
+                                            <div class="plannedETA num4">
+                                                <p>Planned ETA</p>
+                                                <p>Jan 27, 2021 03:42 PM EST</p>
+                                            </div>
+                                            <div class="currentETA num4">
+                                                <p>Current ETA</p>
+                                                <p>Jan 31, 2021 10:17 PM EST</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="wrapper__sub-logos num4">
+                                    <img src="./images/wrapper1/icon_Fire.svg" alt="icon fire pic">
+                                    <img src="./images/wrapper1/meter.svg" alt="icon fire pic">
+                                    <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
+                                    <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
+                                    <img src="./images/wrapper1/JCB.svg" alt="icon fire pic">
+                                    <img src="./images/wrapper1/bulb.svg" alt="icon fire pic">
+                                </div>
+                            </div>
+
+
+
+                            <!--
+
+                                Nm5                          -->
+
+
+
+
+
+
+                            <!-- num5 ends-->
+
+                        </div>
+
+
                     </div>
 
-                    <div class="updates__rightwidget">
-                        <aside class="container-right">
-                            <div class="map">
+                </div>
+
+
+
+
+
+                <section class="container-right">
+                    <div class="map">
+                        <div class="map__header">
+                            <p><b>Risk Chain</b></p>
+                        </div>
+                        <div class="content__right">
+                            <div class="content__heading">
                                 <h1>UST Omni Services</h1>
-                                <br>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut exercitationem dolorem
-                                    magnam labore aliquid inventore sunt illo animi eos mollitia cum voluptates placeat
-                                    blanditiis in distinctio odit culpa, eveniet molestiae!</p>
-
                             </div>
-                        </aside>
-                    </div>
-                </div>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis enim quibusdam
+                                consequatur excepturi, ad adipisci dicta natus, nobis atque quod suscipit vitae omnis.
+                                Doloribus natus harum, odit iste quis nulla deserunt beatae repudiandae quod sed
+                                blanditiis dolorum temporibus veritatis quibusdam neque? Aspernatur exercitationem id
+                                ipsam consectetur dolorem libero distinctio harum debitis aut illo eligendi ratione
+                                laboriosam eaque eveniet qui error quas nisi sequi itaque, adipisci quam, vitae non fuga
+                                repudiandae. Consectetur, voluptas, aliquid et aspernatur quos excepturi velit iusto
+                                eligendi laudantium dicta molestias. Officiis, inventore harum! Veritatis, distinctio
+                                fugit! Voluptates nobis et corporis perspiciatis quo iure molestiae quam aspernatur
+                                explicabo?
+                            </p>
 
-
-                <div class="wrapper">
-                    <div class="wrapper__num1">
-                        <div class="wrapper__header">
-                            <div class="wrapper__header-left">
-                                <p>Shipment ID</p>
-                                <p>109669449</p>
-                            </div>
-                            <div class="wrapper__headericons-right">
-                                <img src="./images/global.svg" alt="global image">
-                                <img src="./images/truckicon.svg" alt="truck image">
-                                <p>On Time</p>
-                            </div>
                         </div>
-                        <div class="wrapper__main">
-                            <div class="wrapper__main_Origin-Destination">
-                                <div class="origin">
-                                    <img src="./images/wrapper__1_arrow.svg" alt="wrapper__1_arrow">
-                                    <div class="wrapper__origin">
-                                        <p>Origin</p>
-                                        <p> Sikkim, IN</p>
-                                    </div>
-                                </div>
-
-                                <div class="destination">
-                                    <img src="./images/Wrapper1_destinationarrow.svg" alt="Wrapper1_destination-arrow">
-
-                                    <div class="wrapper__destination">
-                                        <p>Destination</p>
-                                        <p> Seattle, USA</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="wrapper__mainDetails">
-                                <div class="wrapper__main_Po_Vendordetails">
-                                    <div class="poNumber">
-                                        <p>PO#</p>
-                                        <p>661234</p>
-                                    </div>
-                                    <div class="vendorname">
-                                        <p>Vendor</p>
-                                        <p>&nbsp;Bailey</p>
-                                    </div>
-                                </div>
-                                <div class="wrapper__main_plannedETAdetails">
-                                    <div class="plannedETA">
-                                        <p>Planned ETA</p>
-                                        <p>Jan 27, 2021</p>
-                                    </div>
-                                    <div class="currentETA">
-                                        <p>Current ETA</p>
-                                        <p>Jan 31, 2021</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="wrapper__sub-logos">
-                                <img src="./images/wrapper1/icon_Fire.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/meter.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/JCB.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/bulb.svg" alt="icon fire pic">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wrapper__num2">
-                        <div class="wrapper__header num2">
-                            <div class="wrapper__header-left num2">
-                                <p>Shipment ID</p>
-                                <p>109669412</p>
-                            </div>
-                            <div class="wrapper__headericons-right num2">
-                                <img src="./images/global.svg" alt="global image">
-                                <img src="./images/aeroplane symbol.svg" alt="truck image">
-                                <p>On Time</p>
-                            </div>
-                        </div>
-                        <div class="wrapper__main num2">
-                            <div class="wrapper__main_Origin-Destination num2">
-                                <div class="origin num2">
-                                    <img src="./images/wrapper__1_arrow.svg" alt="wrapper__1_arrow">
-                                    <div class="wrapper__origin num2">
-                                        <p>Origin</p>
-                                        <p> Spain, IE</p>
-                                    </div>
-                                </div>
-
-                                <div class="destination num2">
-                                    <img src="./images/Wrapper1_destinationarrow.svg" alt="Wrapper1_destination-arrow">
-
-                                    <div class="wrapper__destination num2">
-                                        <p>Destination</p>
-                                        <p> Seattle, USA</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="wrapper__mainDetails num2">
-                                <div class="wrapper__main_Po_Vendordetails num2">
-                                    <div class="poNumber num2">
-                                        <p>PO#</p>
-                                        <p>661234</p>
-                                    </div>
-                                    <div class="vendorname num2">
-                                        <p>Vendor</p>
-                                        <p>&nbsp;Bailey</p>
-                                    </div>
-                                </div>
-                                <div class="wrapper__main_plannedETAdetails num2">
-                                    <div class="plannedETA num2">
-                                        <p>Planned ETA</p>
-                                        <p>Jan 27, 2021 03:42 PM EST</p>
-                                    </div>
-                                    <div class="currentETA num2">
-                                        <p>Current ETA</p>
-                                        <p>Jan 31, 2021 10:17 PM EST</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="wrapper__sub-logos num2">
-                                <img src="./images/wrapper1/icon_Fire.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/meter.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/JCB.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/bulb.svg" alt="icon fire pic">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="wrapper__b">
-                    <div class="wrapper__num3">
-                        <div class="wrapper__header num3">
-                            <div class="wrapper__header-left num3">
-                                <p>Shipment ID</p>
-                                <p>109669432</p>
-
-
-                            </div>
-                            <div class="wrapper__headericons-right num3">
-                                <img src="./images/global.svg" alt="global image">
-                                <img src="./images/wrapper3__fire-global.svg" alt="truck image">
-                                <p>DELAYED</p>
-                            </div>
-                        </div>
-                        <div class="trackingStatus">
-                            <div class="trackinginfo">
-                                Awaiting Tracking Info
-                            </div>
-                            <div class="delayTime">
-                                4 hrs delayed
-                            </div>
-                        </div>
-                        <div class="wrapper__main num3">
-                            <div class="wrapper__main_Origin-Destination num3">
-                                <div class="origin num3">
-                                    <img src="./images/wrapper__1_arrow.svg" alt="wrapper__1_arrow">
-                                    <div class="wrapper__origin num3">
-                                        <p>Origin</p>
-                                        <p> Dublin, IR</p>
-                                    </div>
-                                </div>
-
-                                <div class="destination num3">
-                                    <img src="./images/Wrapper1_destinationarrow.svg" alt="Wrapper1_destination-arrow">
-
-                                    <div class="wrapper__destination num3">
-                                        <p>Destination</p>
-                                        <p> Seattle, USA</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="wrapper__mainDetails num3">
-                                <div class="wrapper__main_Po_Vendordetails num3">
-                                    <div class="poNumber num3">
-                                        <p>PO#</p>
-                                        <p>661234</p>
-                                    </div>
-                                    <div class="vendorname num3">
-                                        <p>Vendor</p>
-                                        <p>&nbsp;Bailey</p>
-                                    </div>
-                                </div>
-                                <div class="wrapper__main_plannedETAdetails num3">
-                                    <div class="plannedETA num3">
-                                        <p>Planned ETA</p>
-                                        <p>Jan 27, 2021 03:42 PM EST</p>
-                                    </div>
-                                    <div class="currentETA num3">
-                                        <p>Current ETA</p>
-                                        <p>Jan 31, 2021 10:17 PM EST</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="wrapper__sub-logos num3">
-                                <img src="./images/wrapper1/icon_Fire.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/meter.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/JCB.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/bulb.svg" alt="icon fire pic">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wrapper__num4">
-                        <div class="wrapper__header num4">
-                            <div class="wrapper__header-left num4">
-                                <p>Shipment ID</p>
-                                <p>109669412</p>
-                            </div>
-                            <div class="wrapper__headericons-right num4">
-                                <img src="./images/wrapper4__global.svg" alt="global image">
-                                <img src="./images/aeroplane symbol.svg" alt="truck image">
-                                <p>Resheduled</p>
-                            </div>
-                        </div>
-                        <div class="wrapper__main num4">
-                            <div class="wrapper__main_Origin-Destination num4">
-                                <div class="origin num4">
-                                    <img src="./images/wrapper__1_arrow.svg" alt="wrapper__1_arrow">
-                                    <div class="wrapper__origin num4">
-                                        <p>Origin</p>
-                                        <p> Limoges, FR</p>
-                                    </div>
-                                </div>
-
-                                <div class="destination num4">
-                                    <img src="./images/Wrapper1_destinationarrow.svg" alt="Wrapper1_destination-arrow">
-
-                                    <div class="wrapper__destination num4">
-                                        <p>Destination</p>
-                                        <p> Seattle, USA</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="wrapper__mainDetails num4">
-                                <div class="wrapper__main_Po_Vendordetails num4">
-                                    <div class="poNumber num4">
-                                        <p>PO#</p>
-                                        <p>661234</p>
-                                    </div>
-                                    <div class="vendorname num4">
-                                        <p>Vendor</p>
-                                        <p>&nbsp;Bailey</p>
-                                    </div>
-                                </div>
-                                <div class="wrapper__main_plannedETAdetails num4">
-                                    <div class="plannedETA num4">
-                                        <p>Planned ETA</p>
-                                        <p>Jan 27, 2021 03:42 PM EST</p>
-                                    </div>
-                                    <div class="currentETA num4">
-                                        <p>Current ETA</p>
-                                        <p>Jan 31, 2021 10:17 PM EST</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="wrapper__sub-logos num4">
-                                <img src="./images/wrapper1/icon_Fire.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/meter.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/JCB.svg" alt="icon fire pic">
-                                <img src="./images/wrapper1/bulb.svg" alt="icon fire pic">
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                </div>
+                </section>
+            </div>
 
 
 
 
         </section>
-    </div>
+
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+        <script src="./script.js"></script>
+
+
 </body>
 
 </html>
