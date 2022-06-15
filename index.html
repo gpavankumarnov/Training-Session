@@ -8,7 +8,7 @@
     <title>1st Assignment</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 </head>
@@ -22,7 +22,9 @@
 
             <nav class="header__dashboardlist">
 
-                <ul>
+
+
+                <ul class="header__nav-inks">
                     <a href="https://www.google.com/">
                         <li>
                             <img src="./images/dashboard_icon.svg" alt="dashboard_icon" />
@@ -70,6 +72,13 @@
 
 
             </nav>
+
+            <div class="header__menu-bg">
+
+            </div>
+
+
+
             <div class="header__dashboard">
                 <span><img src="./images/dashboardShipment_icon.svg" alt="shipment_icon" /></span>
                 <span><img src="./images/dashboardShipment_icon.svg" alt="shipment_icon" /></span>
@@ -77,34 +86,51 @@
                 <img src="./images/user-profile.svg" alt="user profile">
             </div>
 
+            <!-- <div class="hamburger">
+                <span class="menu"></span>
+                <span class="menu"></span>
+                <span class="menu"></span>
+            </div> -->
             <div class="hamburger">
-                <span class="menu"></span>
-                <span class="menu"></span>
-                <span class="menu"></span>
+                <i class="fas fa-bars"></i>
             </div>
+
+
+            <!-- <i class="fa-solid fa-angle-right"></i> -->
 
 
         </header>
 
         <section class="main">
-            <div class="status__header">
-                <div class="status_action_card">
+
+
+            <div class="status__header corousel">
+                <div class="status_action_card track-container">
                     <div class="status__actions">
                         <p class="status__actionstotake">Actions to take</p>
                         <p class="status__actionscount"><b>24</b></p>
                     </div>
-                    <div class="status__actionsimage">
-                        <img src="./images/ActionsToTake.svg" alt="Actions to take" />
-                    </div>
+
+                    <img src="./images/ActionsToTake.svg" alt="Actions to take" />
+                    <!-- 
+                    <button class="carousel__button carousel__button--right">
+                        <img class="angle-right" src="./images/angle-right-design.svg" alt="angle-right">
+                    </button> -->
+
+                    <!-- <button class="carousel__buttona carousel__button--right">
+                        <img class="angle-right" src="./images/angle-right.svg" alt="angle-right">
+                    </button> -->
+
                 </div>
+                <span aria-label="Next slide" class="nav next" role="button"></span>
                 <div class="status__pendingApproval_card">
                     <div class="status__pendingapprovals">
                         <p class="status__pendingapprovalsText">Pending approvals</p>
                         <p class="status__pendingapprovalscount"><b>13</b></p>
                     </div>
-                    <div class="status__pendingimage">
-                        <img src="./images/pendingApprovals.svg" alt="Actions to take" />
-                    </div>
+
+                    <img src="./images/pendingApprovals.svg" alt="Actions to take" />
+
                 </div>
                 <div class="status__delivered_card">
                     <div class="status__Delivered">
@@ -114,9 +140,9 @@
                             <span class="status__Delivered-last-days">last 7 days</span>
                         </p>
                     </div>
-                    <div class="status__deliveredimage">
-                        <img src="./images/deliveryInFull.svg" alt="Actions to take" />
-                    </div>
+
+                    <img src="./images/deliveryInFull.svg" alt="Actions to take" />
+
                 </div>
                 <div class="status__inbound_frieght">
                     <div class="status__Inbound">
@@ -158,10 +184,12 @@
 
 
                     </div>
-                    <div class="status__inboundimage">
-                        <img src="./images/inBoundFrieght.svg" alt="Actions to take" />
-                    </div>
+
+                    <img src="./images/inBoundFrieght.svg" alt="Actions to take" />
+
                 </div>
+
+
             </div>
 
 
@@ -184,6 +212,8 @@
                             <div class="updates__header-right">
                                 <a href="https://www.google.com/" class="updates__view_all_shipment">view all
                                     shipments &nbsp;<span>></span></a>
+                                <a href="https://www.google.com/" class="updates__view_all">view all
+                                    &nbsp;<span>></span></a>
                             </div>
                         </div>
                         <div class="updates__content">
@@ -195,6 +225,8 @@
                             <a>On Time <span>(7)</span></a>
 
                         </div>
+                        <img class="updates__angle-right" src="./images/updates__angle-right.svg"
+                            alt="updates__angle-right">
 
                         <div class="search">
                             <form action="" class="search__seachfield-box">
@@ -207,6 +239,7 @@
                                     name="search">
                             </form>
                         </div>
+
                     </div>
                     <div class="shipment_cards">
                         <div class="wrapper">
@@ -482,16 +515,7 @@
 
 
 
-                            <!--
 
-                                Nm5                          -->
-
-
-
-
-
-
-                            <!-- num5 ends-->
 
                         </div>
 
@@ -507,6 +531,7 @@
                 <section class="container-right">
                     <div class="map">
                         <div class="map__header">
+                            <img class="expand" src="./images/expandbutton__riskChain.svg" alt="">
                             <p><b>Risk Chain</b></p>
                         </div>
                         <div class="content__right">
