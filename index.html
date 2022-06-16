@@ -84,17 +84,17 @@
                 <span><img src="./images/dashboardShipment_icon.svg" alt="shipment_icon" /></span>
                 <span class="header__dashbaordusername">Chance Kenter </span>
                 <img src="./images/user-profile.svg" alt="user profile">
-            </div>
 
-            <!-- <div class="hamburger">
+
+                <!-- <div class="hamburger">
                 <span class="menu"></span>
                 <span class="menu"></span>
                 <span class="menu"></span>
             </div> -->
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
-
 
             <!-- <i class="fa-solid fa-angle-right"></i> -->
 
@@ -103,93 +103,96 @@
 
         <section class="main">
 
+            <div class="cards__container">
+                <div class="status__header corousel" id="slider-main">
+                    <div class="status_action_card track-container" name="item">
+                        <div class="status__actions">
+                            <p class="status__actionstotake">Actions to take</p>
+                            <p class="status__actionscount"><b>24</b></p>
+                        </div>
 
-            <div class="status__header corousel">
-                <div class="status_action_card track-container">
-                    <div class="status__actions">
-                        <p class="status__actionstotake">Actions to take</p>
-                        <p class="status__actionscount"><b>24</b></p>
-                    </div>
-
-                    <img src="./images/ActionsToTake.svg" alt="Actions to take" />
-                    <!-- 
+                        <img src="./images/ActionsToTake.svg" alt="Actions to take" id="output" />
+                        <!-- 
                     <button class="carousel__button carousel__button--right">
                         <img class="angle-right" src="./images/angle-right-design.svg" alt="angle-right">
                     </button> -->
 
-                    <!-- <button class="carousel__buttona carousel__button--right">
+                        <!-- <button class="carousel__buttona carousel__button--right">
                         <img class="angle-right" src="./images/angle-right.svg" alt="angle-right">
+
                     </button> -->
-
-                </div>
-                <span aria-label="Next slide" class="nav next" role="button"></span>
-                <div class="status__pendingApproval_card">
-                    <div class="status__pendingapprovals">
-                        <p class="status__pendingapprovalsText">Pending approvals</p>
-                        <p class="status__pendingapprovalscount"><b>13</b></p>
                     </div>
+                    <span aria-label="Next slide" class="nav next" role="button" onclick="nextSlide()"></span>
 
-                    <img src="./images/pendingApprovals.svg" alt="Actions to take" />
 
-                </div>
-                <div class="status__delivered_card">
-                    <div class="status__Delivered">
-                        <p class="status__Delivered-in-full">Delivered in full</p>
-                        <p class="status__Delivered-in-full-percentage">
-                            <b>97%</b>
-                            <span class="status__Delivered-last-days">last 7 days</span>
-                        </p>
+                    <div class="status__pendingApproval_card" name="item">
+                        <div class="status__pendingapprovals">
+                            <p class="status__pendingapprovalsText">Pending approvals</p>
+                            <p class="status__pendingapprovalscount"><b>13</b></p>
+                        </div>
+
+                        <img src="./images/pendingApprovals.svg" alt="Actions to take" />
+
                     </div>
+                    <div class="status__delivered_card" name="item">
+                        <div class="status__Delivered">
+                            <p class="status__Delivered-in-full">Delivered in full</p>
+                            <p class="status__Delivered-in-full-percentage">
+                                <b>97%</b>
+                                <span class="status__Delivered-last-days">last 7 days</span>
+                            </p>
+                        </div>
 
-                    <img src="./images/deliveryInFull.svg" alt="Actions to take" />
+                        <img src="./images/deliveryInFull.svg" alt="Actions to take" />
 
-                </div>
-                <div class="status__inbound_frieght">
-                    <div class="status__Inbound">
-                        <p class="status__Inbound-frieght">
-                            Inbound Freight as % of COGS
-                        </p>
+                    </div>
+                    <div class="status__inbound_frieght" name="item">
+                        <div class="status__Inbound">
+                            <p class="status__Inbound-frieght">
+                                Inbound Freight as % of COGS
+                            </p>
 
 
-                        <div class="items">
-                            <div class="cla">
-                                <p class="status__Inbound">Frozen</p>
-                                <p class="status__color">
-                                    <span>5%</span>
-                                </p>
+                            <div class="items">
+                                <div class="cla">
+                                    <p class="status__Inbound">Frozen</p>
+                                    <p class="status__color">
+                                        <span>5%</span>
+                                    </p>
+                                </div>
+                                <div class="cla">
+                                    <p class="status__Inbound">Perishable</p>
+                                    <p class="status__color">
+                                        <span>3%</span>
+                                    </p>
+                                </div>
+
+                                <div class="cla">
+                                    <p class="status__Inbound">Fresh</p>
+                                    <p class="status__color">
+                                        <span>6%</span>
+                                    </p>
+                                </div>
+
+                                <div class="cla">
+                                    <p class="status__Inbound">Dry</p>
+                                    <p class="status__color">
+                                        <span>10%</span>
+                                    </p>
+                                </div>
+
                             </div>
-                            <div class="cla">
-                                <p class="status__Inbound">Perishable</p>
-                                <p class="status__color">
-                                    <span>3%</span>
-                                </p>
-                            </div>
 
-                            <div class="cla">
-                                <p class="status__Inbound">Fresh</p>
-                                <p class="status__color">
-                                    <span>6%</span>
-                                </p>
-                            </div>
 
-                            <div class="cla">
-                                <p class="status__Inbound">Dry</p>
-                                <p class="status__color">
-                                    <span>10%</span>
-                                </p>
-                            </div>
 
                         </div>
 
-
+                        <img src="./images/inBoundFrieght.svg" alt="Actions to take" />
 
                     </div>
 
-                    <img src="./images/inBoundFrieght.svg" alt="Actions to take" />
 
                 </div>
-
-
             </div>
 
 
@@ -234,9 +237,10 @@
                                     <img src="./images/searchIcon.svg" alt="search icon">
 
                                 </button>
-                                <input type="text"
+                                <input class="big" type="text"
                                     placeholder="Search by: Shipment ID, Origin, Destination, Product category, vendor"
                                     name="search">
+                                <input class="small" type="text" placeholder="&nbsp; Search" name="search">
                             </form>
                         </div>
 
@@ -531,8 +535,9 @@
                 <section class="container-right">
                     <div class="map">
                         <div class="map__header">
-                            <img class="expand" src="./images/expandbutton__riskChain.svg" alt="">
+
                             <p><b>Risk Chain</b></p>
+                            <img class="expand" src="./images/expandbutton__riskChain.svg" alt="">
                         </div>
                         <div class="content__right">
                             <div class="content__heading">

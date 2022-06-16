@@ -347,10 +347,21 @@ section.main {
   /* border: 1px solid red; */
 }
 
+.cards__container {
+  width: 100%;
+  height: 5rem;
+  min-width: 100%;
+  overflow-x: scroll;
+}
+
+.cards__container::-webkit-scrollbar {
+  height: 2px;
+}
+
 .status__header {
   display: flex;
   justify-content: space-between;
-  height: 5rem;
+  height: 100%;
 }
 
 .status__header > div {
@@ -369,6 +380,7 @@ section.main {
   font-family: "Roboto", sans-serif;
   width: 100%;
   color: #666666;
+  font-size: 0.6875rem;
 }
 
 .status__header > div > :nth-child(1) > :nth-child(1) {
@@ -434,7 +446,8 @@ section.main {
   width: 100%;
 }
 
-.items p {
+.nav.next {
+  display: none;
 }
 
 .item__percentage {
@@ -493,7 +506,7 @@ section.main {
 
 .updates {
   margin: 0 10px 0 0;
-  height: 9rem;
+  height: 10rem;
   /* border: 2px solid green; */
   width: 100%;
   background-color: #ffffff;
@@ -548,10 +561,6 @@ section.main {
   font-family: "Roboto", sans-serif;
 }
 
-.updates__header-right :hover {
-  background-color: #0097ab;
-}
-
 .updates__header-left a {
   text-decoration: none;
   color: #2f3749;
@@ -565,6 +574,7 @@ section.main {
   font-size: 12px;
   font-weight: 700;
   color: #006e74;
+  height: 100%;
 }
 
 .updates__header-left > :nth-child(1) {
@@ -613,6 +623,10 @@ section.main {
   cursor: pointer;
   font-family: "Roboto", sans-serif;
 }
+/* 
+.items .cla {
+  margin-bottom: 0.625rem;
+} */
 
 .updates__content > :nth-child(1) {
   font-size: 0.875rem;
@@ -681,7 +695,7 @@ section.main {
 .shipment_cards {
   width: 100%;
   margin-top: 0.9375rem;
-  height: calc(100% - 9.9375rem);
+  height: calc(100% - 10.9375rem);
 }
 
 .map h1 {
@@ -691,6 +705,13 @@ section.main {
   align-items: center;
   margin-top: 20px;
   font-family: "Roboto", sans-serif;
+}
+
+.map__header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  align-items: center;
 }
 
 .map__header p {
@@ -947,6 +968,10 @@ section.main {
   margin: 0.625rem;
 }
 
+.updates__angle-right {
+  display: none;
+}
+
 /* .header__menu-bg {
    position: absolute;
   top: 0;
@@ -965,15 +990,13 @@ section.main {
   display: block;
 } */
 
-@media (max-width: 650px) {
-  .header div {
-    width: 15rem;
-  }
-
+@media only screen and (max-width: 480px) {
   .status__header.corousel {
     display: flex;
-    min-width: 93.75rem;
-    overflow-x: auto;
+    /* min-width: 93.75rem; */
+    min-width: 101rem;
+
+    width: 100%;
   }
 
   .status__header.corousel::-webkit-scrollbar {
@@ -981,10 +1004,10 @@ section.main {
   }
 
   .status__header div {
-    /* width: 24%; */
     justify-content: space-between;
-    margin-right: 0.625rem;
+    /* margin-right: 0.625rem; */
   }
+
   .hamburger {
     display: block;
     z-index: 1;
@@ -994,6 +1017,20 @@ section.main {
     display: none;
   }
 
+  .container__left {
+    padding: 0rem;
+  }
+
+  .updates__content > :nth-child(2) {
+    min-width: 7rem;
+  }
+  .updates__content > :nth-child(4) {
+    min-width: 8rem;
+  }
+  .updates__content > :nth-child(5),
+  .updates__content > :nth-child(6) {
+    min-width: 9rem;
+  }
   /* html {
     position: relative;
   } */
@@ -1053,6 +1090,10 @@ section.main {
     display: block;
   }
 
+  input.big {
+    display: none;
+  }
+
   .updates__header-right .updates__view_all_shipment {
     display: none;
   }
@@ -1060,9 +1101,16 @@ section.main {
   .updates__header-right a.updates__view_all {
     display: block;
     height: 100%;
+    font-size: 0.75rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8125rem;
+  }
+  .updates__header-right a {
+    padding: 0rem;
+    font-size: 0.75rem;
   }
 
-  .track-container {
+  .status__header.corousel > :nth-child(1) {
     position: relative;
   }
 
@@ -1080,12 +1128,16 @@ section.main {
     width: 24px;
   }
 
-  .next {
+  .nav.next {
+    display: block;
     position: absolute;
     top: 15%;
-    right: 3.25rem;
+    right: 0.7rem;
+    height: 24px;
+    width: 24px;
     text-align: center;
     background-color: #36c8ea;
+    z-index: 1;
   }
 
   .next:after {
@@ -1105,10 +1157,18 @@ section.main {
     overflow-x: auto;
   }
 
+  .updates__content > :nth-child(2) {
+  }
+
   .updates__angle-right {
     position: absolute;
     top: 30%;
     right: 0%;
+    display: block;
+  }
+
+  .search {
+    margin-right: 0.625rem;
   }
 
   .wrapper__num {
