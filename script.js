@@ -24,9 +24,29 @@ hamburger.addEventListener("click", () => {
 //   outPut.src = "./imgs/image" + sliderNumber + ".svg";
 // }
 
-let slider = document.getElementById("slider-main");
-let items = document.getElementsByName("item");
+// let slider = document.getElementById("slider-main");
+// let items = document.getElementsByName("item");
 
-function nextSlide() {
-  slider.append(items[0]);
-}
+// function nextSlide() {
+//   slider.append(items[0]);
+// }
+
+// let slider = document.querySelector(".status__header.corousel");
+let slider = document.getElementById("slider-main");
+let nextArrow = document.querySelector(".nav.next");
+let slideIndex = 0;
+
+nextArrow.addEventListener("click", function () {
+  slideIndex = slideIndex < 3 ? slideIndex + 1 : 3;
+  slider.style.transform = "translate(" + slideIndex * -25 + "%)";
+  console.log("clicked");
+});
+
+const updates_scrollBtn = document.querySelector(".updates__angle-right");
+const contentToBeScroll = document.querySelector(".updates__content");
+
+updates_scrollBtn.addEventListener("click", function () {
+  contentToBeScroll.style.transform)
+  contentToBeScroll.scrollTo(100, 0);
+  console.log("content scrolled");
+});
