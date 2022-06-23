@@ -94,6 +94,7 @@
                 <div class="hamburger">
                     <i class="fas fa-bars"></i>
                 </div>
+                <div class="close-menu"><i class="fa-solid fa-x"></i></div>
             </div>
 
             <!-- <i class="fa-solid fa-angle-right"></i> -->
@@ -101,11 +102,71 @@
 
         </header>
 
+        <nav class="header__tabletDashboardlist">
+
+
+
+            <ul class="header__nav-inks">
+                <a href="https://www.google.com/">
+                    <li>
+                        <img src="./images/Hamburger/Hambur-mobile-dashboard.svg" alt="dashboard_icon" />
+                        <div class="cls">Dashboard</div>
+
+                    </li>
+                </a>
+
+                <a href="https://www.google.com/">
+                    <li>
+
+                        <img src="./images/Hamburger/Hamburger - mobile -Shipment_Mgmt.svg" alt="shipment_icon" />
+                        <div>Shipments</div>
+                    </li>
+                </a>
+
+
+                <a href="https://www.google.com/">
+                    <li>
+
+                        <img src="./images/Hamburger/Hamburger - mobile -Shipment_Mgmt.svg" alt="shipment_icon" />
+                        <div>Reports</div>
+                    </li>
+                </a>
+
+                <a href="https://www.google.com/">
+                    <li>
+
+                        <img src="./images/Hamburger/Hamburger - mobile -Shipment_Mgmt.svg" alt="shipment_icon" />
+                        <div>Control Tower</div>
+                    </li>
+                </a>
+
+
+                <a href="https://www.google.com/">
+                    <li>
+
+                        <img src="./images/Hamburger/Hamburger - mobile -Shipment_Mgmt.svg" alt="shipment_icon" />
+                        <div>Action Panel</div>
+                    </li>
+                </a>
+
+
+            </ul>
+
+
+        </nav>
+
+
+
+
         <section class="main">
 
-            <div class="cards__container">
-                <div class="status__header corousel" id="slider-main">
-                    <div class="status_action_card track-container" name="item">
+            <div class="cards__container" id="cont">
+                <span aria-label="Next slide" id="nextButton" class="nav next" role="button"></span>
+                <!--  onclick="nextClick()"-->
+                <span aria-label="Next slide" id="previousButton" class="nav previous" role="button"></span>
+                <!--onclick="previousClick()"-->
+                <div class="status__actionCards">
+                    <div class="status_card" id="cont1">
                         <div class="status__actions">
                             <p class="status__actionstotake">Actions to take</p>
                             <p class="status__actionscount"><b>24</b></p>
@@ -122,10 +183,10 @@
 
                     </button> -->
                     </div>
-                    <span aria-label="Next slide" class="nav next" role="button"></span>
+
                     <!-- onclick="nextSlide() -->
 
-                    <div class="status__pendingApproval_card" name="item">
+                    <div class="status_card">
                         <div class="status__pendingapprovals">
                             <p class="status__pendingapprovalsText">Pending approvals</p>
                             <p class="status__pendingapprovalscount"><b>13</b></p>
@@ -134,9 +195,9 @@
                         <img src="./images/pendingApprovals.svg" alt="Actions to take" />
 
                     </div>
-                    <div class="status__delivered_card" name="item">
+                    <div class="status_card">
                         <div class="status__Delivered">
-                            <p class="status__Delivered-in-full">Delivered in full</p>
+                            <p class="status__Delivered-in-fullText">Delivered in full</p>
                             <p class="status__Delivered-in-full-percentage">
                                 <b>97%</b>
                                 <span class="status__Delivered-last-days">last 7 days</span>
@@ -146,9 +207,9 @@
                         <img src="./images/deliveryInFull.svg" alt="Actions to take" />
 
                     </div>
-                    <div class="status__inbound_frieght" name="item">
+                    <div class="status_card">
                         <div class="status__Inbound">
-                            <p class="status__Inbound-frieght">
+                            <p class="status__Inbound-frieghtText">
                                 Inbound Freight as % of COGS
                             </p>
 
@@ -192,6 +253,23 @@
                     </div>
 
 
+                    <div class="status__tabletViewInbound">
+                        <div class="status__Inbound">
+                            <p class="status__Inbound-frieght">
+                                Cost of Goods Sold
+                            </p>
+                            <p class="status__Delivered-in-full-percentage">
+                                <b>83%</b>
+                                <span class="status__Delivered-last-days">this quarter</span>
+
+                        </div>
+
+                        <img src="./images/inBoundFrieght.svg" alt="Actions to take" />
+                    </div>
+
+
+
+
                 </div>
             </div>
 
@@ -228,8 +306,14 @@
                             <a>On Time <span>(7)</span></a>
 
                         </div>
-                        <img class="updates__angle-right" src="./images/updates__angle-right.svg"
-                            alt="updates__angle-right">
+                        <div class="updates__angle-right">
+                            <!--onclick="scrollContent()"-->
+                            <img src="./images/updates__angle-right.svg" alt="updates__angle-right">
+                        </div>
+
+                        <div class="updates__angle-left" onclick="scrollLeftContent()">
+                            <img src="./images/updates__angle-right.svg" alt="updates__angle-left">
+                        </div>
 
                         <div class="search">
                             <form action="" class="search__seachfield-box">
@@ -237,10 +321,10 @@
                                     <img src="./images/searchIcon.svg" alt="search icon">
 
                                 </button>
-                                <input class="big" type="text"
+                                <input id="searchBox" class="big" type="text"
                                     placeholder="&nbsp;Search by: Shipment ID, Origin, Destination, Product category, vendor"
-                                    name="search">
-                                <input class="small" type="text" placeholder="&nbsp; Search" name="search">
+                                    name="search" onkeyup="searchFunc()">
+
                             </form>
                         </div>
 
@@ -251,7 +335,7 @@
                                 <div class="wrapper__header">
                                     <div class="wrapper__header-left">
                                         <p>Shipment ID</p>
-                                        <p>109669449</p>
+                                        <p class="text">109669449</p>
                                     </div>
                                     <div class="wrapper__headericons-right">
                                         <img src="./images/global.svg" alt="global image">
@@ -265,7 +349,7 @@
                                             <img src="./images/wrapper__1_arrow.svg" alt="wrapper__1_arrow">
                                             <div class="wrapper__origin">
                                                 <p>Origin</p>
-                                                <p> Sikkim, IN</p>
+                                                <p class="text"> Sikkim, IN</p>
                                             </div>
                                         </div>
 
@@ -273,9 +357,9 @@
                                             <img src="./images/Wrapper1_destinationarrow.svg"
                                                 alt="Wrapper1_destination-arrow">
 
-                                            <div class="wrapper__destination">
+                                            <div class="wrapper__origin">
                                                 <p>Destination</p>
-                                                <p> Seattle, USA</p>
+                                                <p class="text"> Seattle, USA</p>
                                             </div>
                                         </div>
                                     </div>
@@ -315,7 +399,7 @@
                                 <div class="wrapper__header num2">
                                     <div class="wrapper__header-left num2">
                                         <p>Shipment ID</p>
-                                        <p>109669412</p>
+                                        <p class="text">109669412</p>
                                     </div>
                                     <div class="wrapper__headericons-right num2">
                                         <img src="./images/global.svg" alt="global image">
@@ -329,7 +413,7 @@
                                             <img src="./images/wrapper__1_arrow.svg" alt="wrapper__1_arrow">
                                             <div class="wrapper__origin num2">
                                                 <p>Origin</p>
-                                                <p> Spain, IE</p>
+                                                <p class="text"> Spain, IE</p>
                                             </div>
                                         </div>
 
@@ -337,9 +421,9 @@
                                             <img src="./images/Wrapper1_destinationarrow.svg"
                                                 alt="Wrapper1_destination-arrow">
 
-                                            <div class="wrapper__destination num2">
+                                            <div class="wrapper__origin num2">
                                                 <p>Destination</p>
-                                                <p> Seattle, USA</p>
+                                                <p class="text"> Seattle, USA</p>
                                             </div>
                                         </div>
                                     </div>
@@ -381,7 +465,7 @@
                                 <div class="wrapper__header num3">
                                     <div class="wrapper__header-left num3">
                                         <p>Shipment ID</p>
-                                        <p>109669432</p>
+                                        <p class="text">109669432</p>
 
 
                                     </div>
@@ -405,7 +489,7 @@
                                             <img src="./images/wrapper__1_arrow.svg" alt="wrapper__1_arrow">
                                             <div class="wrapper__origin num3">
                                                 <p>Origin</p>
-                                                <p> Dublin, IR</p>
+                                                <p class="text"> Dublin, IR</p>
                                             </div>
                                         </div>
 
@@ -413,9 +497,9 @@
                                             <img src="./images/Wrapper1_destinationarrow.svg"
                                                 alt="Wrapper1_destination-arrow">
 
-                                            <div class="wrapper__destination num3">
+                                            <div class="wrapper__origin num3">
                                                 <p>Destination</p>
-                                                <p> Seattle, USA</p>
+                                                <p class="text"> Seattle, USA</p>
                                             </div>
                                         </div>
                                     </div>
@@ -455,7 +539,7 @@
                                 <div class="wrapper__header num4">
                                     <div class="wrapper__header-left num4">
                                         <p>Shipment ID</p>
-                                        <p>109669412</p>
+                                        <p class="text">109669412</p>
                                     </div>
                                     <div class="wrapper__headericons-right num4">
                                         <img src="./images/wrapper4__global.svg" alt="global image">
@@ -469,7 +553,7 @@
                                             <img src="./images/wrapper__1_arrow.svg" alt="wrapper__1_arrow">
                                             <div class="wrapper__origin num4">
                                                 <p>Origin</p>
-                                                <p> Limoges, FR</p>
+                                                <p class="text"> Limoges, FR</p>
                                             </div>
                                         </div>
 
@@ -477,9 +561,9 @@
                                             <img src="./images/Wrapper1_destinationarrow.svg"
                                                 alt="Wrapper1_destination-arrow">
 
-                                            <div class="wrapper__destination num4">
+                                            <div class="wrapper__origin num4">
                                                 <p>Destination</p>
-                                                <p> Seattle, USA</p>
+                                                <p class="text"> Seattle, USA</p>
                                             </div>
                                         </div>
                                     </div>
@@ -506,15 +590,19 @@
                                         </div>
                                     </div>
 
+
+                                    <div class="wrapper__sub-logos num4">
+                                        <img src="./images/wrapper1/icon_Fire.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/meter.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/JCB.svg" alt="icon fire pic">
+                                        <img src="./images/wrapper1/bulb.svg" alt="icon fire pic">
+                                    </div>
+
                                 </div>
-                                <div class="wrapper__sub-logos num4">
-                                    <img src="./images/wrapper1/icon_Fire.svg" alt="icon fire pic">
-                                    <img src="./images/wrapper1/meter.svg" alt="icon fire pic">
-                                    <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
-                                    <img src="./images/wrapper1/fire.svg" alt="icon fire pic">
-                                    <img src="./images/wrapper1/JCB.svg" alt="icon fire pic">
-                                    <img src="./images/wrapper1/bulb.svg" alt="icon fire pic">
-                                </div>
+
+
                             </div>
 
 
@@ -562,14 +650,23 @@
                             </p>
 
                         </div>
+
+                    </div>
+
                 </section>
+
             </div>
 
 
-
-
         </section>
 
+        <footer class="map__tabletView">
+            <div class="map__header">
+
+                <p><b>Risk Chain</b></p>
+                <img class="expand" src="./images/expandbutton__riskChain.svg" alt="">
+            </div>
+        </footer>
 
 
 
@@ -578,7 +675,11 @@
 
 
 
-        </section>
+
+
+
+
+
 
 
 
