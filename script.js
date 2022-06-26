@@ -1,5 +1,16 @@
 "use strict";
 
+//Header_Dashboard list on click color/box-shadow change TODO:
+let navButtons = document.querySelectorAll(".header__dashboardlist a");
+
+navButtons.forEach((ele) => {
+  ele.addEventListener("click", function () {
+    navButtons.forEach((btn) => btn.classList.remove("active"));
+    //Below represents -> which element we click that should apply class as active.
+    ele.classList.add("active");
+  });
+});
+
 //Hamburger dashboard mobile view TODO:
 
 const hamburger = document.querySelector(".hamburger");
@@ -197,17 +208,23 @@ updates_angleLeft.style.display = "none";
 
 updates_angleRight.addEventListener("click", function () {
   console.log("angle");
-  let list_elements = document.querySelector(".updates__content>:nth-child(4)");
+  let list_elements = document.querySelector(
+    ".updates__content ul>:nth-child(4)"
+  );
   list_elements.scrollIntoView();
 });
 
 updates_angleRight.addEventListener("click", function () {
-  let list_elements = document.querySelector(".updates__content>:nth-child(5)");
+  let list_elements = document.querySelector(
+    ".updates__content ul>:nth-child(5)"
+  );
   list_elements.scrollIntoView();
 });
 
 updates_angleRight.addEventListener("click", function () {
-  let list_elements = document.querySelector(".updates__content>:nth-child(6)");
+  let list_elements = document.querySelector(
+    ".updates__content ul>:nth-child(6)"
+  );
   list_elements.scrollIntoView();
   if ((updates_angleRight.style.display = "block")) {
     updates_angleRight.style.display = "none";
@@ -234,7 +251,41 @@ function scrollLeftContent() {
   }
 }
 
-//Updates scroll  TODO:
+//Updates-header left on click  TODO:
+
+let items = document.querySelectorAll(".updates__header-left a");
+
+items.forEach((ele) => {
+  ele.addEventListener("click", function () {
+    items.forEach((btn) => btn.classList.remove("active"));
+    ele.classList.add("active");
+  });
+});
+
+//Updates on click TODO:
+
+let update_cards = document.querySelector(".updates__content ul");
+console.log(update_cards);
+let cards = document.querySelectorAll(".updates__content li");
+
+cards.forEach((ele) => {
+  ele.addEventListener("click", function () {
+    update_cards.querySelector(".active").classList.remove("active");
+    ele.classList.add("active");
+    console.log("clicked");
+  });
+});
+
+// let cards = document.querySelectorAll(".updates__content ul li");
+
+// cards.forEach((ele) => {
+//   ele.addEventListener("click", function () {
+//     cards.forEach((btn) => btn.classList.remove("active"));
+//     //Here this keyword is the button which we click - that should become active.
+//     this.classList.add("active");
+//   });
+// });
+
 /** 
 let updates_angleLeft = document.querySelector(".updates__angle-left");
 function scrollContent() {
@@ -270,7 +321,63 @@ function scrollLeftContent() {
 // based on currentposiiton + add 100
 
 //Search functionality  TODO:
-/*
+
+let inputPass,
+  inputValue,
+  wrapper,
+  wrapperSize,
+  eachWrapper,
+  txtValue,
+  setTimeID;
+
+let foundValue = "false";
+
+//Created a searchFunc Function (arrow) as a debouncing type.
+//2seconds to wait before executing the searchFilter func.
+//Clearing the previous running setTimeout function when user types on searchfield.
+const searchFunc = () => {
+  clearInterval(setTimeID);
+  setTimeID = setTimeout(searchFilter, 2000);
+};
+
+const searchFilter = () => {
+  debugger;
+  //Getting the value of passed input on searchfield.
+  inputPass = document.getElementById("searchBox");
+  inputValue = inputPass.value.toUpperCase();
+  console.log(inputValue);
+  wrapper = document.querySelector(".wrapper");
+  wrapperSize = wrapper.querySelectorAll(".wrapper__num");
+
+  for (let j = 0; j < wrapperSize.length; j++) {
+    eachWrapper = wrapperSize[j].querySelectorAll(".text");
+    for (let i = 0; i < eachWrapper.length; i++) {
+      console.log(eachWrapper.length);
+      txtValue = eachWrapper[i].textContent || eachWrapper[i].innerText;
+      console.log(txtValue);
+      //return true if found, otherwise false.
+      if (txtValue.toUpperCase().indexOf(inputValue) > -1) {
+        console.log(foundValue);
+        foundValue = "true";
+
+        // wrapperSize[i].style.display = "";
+      } else {
+        // wrapperSize[i].style.display = "none";
+        console.log("not found.");
+      }
+    }
+    if (foundValue === "true") {
+      console.log(foundValue);
+      wrapperSize[j].style.display = "";
+    } else {
+      console.log(foundValue);
+      wrapperSize[j].style.display = "none";
+    }
+    foundValue = "false";
+  }
+};
+
+/** 
 let input = document.querySelector("#searchBox");
 
 let setTimeID;
@@ -311,7 +418,7 @@ const searchFilter = () => {
   }
 };
 */
-
+/** 
 let input = document.querySelector("#searchBox");
 
 let setTimeID;
@@ -370,7 +477,7 @@ const searchFilter = () => {
     }
   });
   //console.log(indexes);
-};
+};  */
 
 // updatedone:
 //   for (let j = 0; j < wrappers.length; j++) {
